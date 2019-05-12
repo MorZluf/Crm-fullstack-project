@@ -1,0 +1,19 @@
+#nav-container{
+    display: grid;
+    background-color: #0a1612;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 15px;
+    
+}
+
+.main-items{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.nav-item{
+    display: grid;
+    align-content: center;
+    color: #ecf0f1;
+    height: 100%;
+}

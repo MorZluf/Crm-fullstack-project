@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react'
 import './App.css';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import Navbar from './components/Navbar';
+import Clients from './components/clients-components/Clients';
+import Actions from './components/Actions';
+import Analytics from './components/Analytics';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      data: require('../src/utils/data'),
+      text: ""
+    }
+  }
+
+  handleInput = (e) => {
+    this.setState({
+        text: e.target.value
+    })
+}
+
+
+  render() {
+    return (
+      <Router>
+      <div id="app">
+      <Navbar />
+      <Route path="/clients" exact render={() => <Clients handleInput={this.handleInput} 
+      data={this.state.text =="" ?
+      this.state.data : 
+      this.state.data.filter(c => c.name.toLocaleLowerCase().includes(this.state.text.toLocaleLowerCase()))}/>} />
+      <Route path="/actions" exact render={() => <Actions />} />
+      <Route path="/analytics" exact render={() => <Analytics />} />
+      </div>
+      </Router>
+
+    )
+  }
 }
 
 export default App;
