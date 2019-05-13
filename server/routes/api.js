@@ -9,8 +9,7 @@ const populateDB = async function () {
     console.log(data)
     for (let d of data) {
         let client1 = new Client({
-            name: d.name.split(" ")[0],
-            surName: d.name.split(" ")[1],
+            name: d.name,
             country: d.country,
             firstContact: d.firstContact,
             emailType: d.emailType,

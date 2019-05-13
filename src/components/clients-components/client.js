@@ -15,7 +15,7 @@ class Client extends Component {
                 <div>{c.country}</div>
                 <div>{c.firstContact.split("T")[0]}</div>
                 <div>{c.emailType}</div>
-                <div>{c.sold ? <i class="fas fa-check"></i> : "-"}</div>
+                <div>{c.sold ? <i className="fas fa-check"></i> : "-"}</div>
                 <div>{c.owner}</div>
             </div>
         )
