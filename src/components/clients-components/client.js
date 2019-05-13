@@ -9,13 +9,13 @@ class Client extends Component {
         let surName = c.name.split(" ")[1]
         return (
             
-            <div id="clients-container">
+            <div id="clients-container" onClick={this.showPopUpClient}>
                 <div>{name}</div>
                 <div>{surName}</div>
                 <div>{c.country}</div>
                 <div>{c.firstContact.split("T")[0]}</div>
                 <div>{c.emailType}</div>
-                <div>{c.sold ? "V" : "."}</div>
+                <div>{c.sold ? <i class="fas fa-check"></i> : "-"}</div>
                 <div>{c.owner}</div>
             </div>
         )

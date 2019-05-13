@@ -2,9 +2,9 @@
     display: grid;
     background-color: #0a1612;
     grid-template-columns: repeat(2, 1fr);
-    padding: 15px;
-    
+    padding: 15px;  
 }
+
 
 .main-items{
     display: grid;
@@ -16,4 +16,9 @@
     align-content: center;
     color: #ecf0f1;
     height: 100%;
+}
+
+a{
+    color: #ecf0f1;
+    text-decoration: none;
 }
