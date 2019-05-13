@@ -32,14 +32,19 @@ router.get('/clients', async function (req, res) {
     res.send(clientsData)
 })
 
-router.post('/clients', async function (req, res) {
+router.get('/actions', async function (req, res) {
+    const clientsData = await Client.find({}, "_id name owner")
+    res.send(clientsData)
+})
+
+router.post('/actions', async function (req, res) {
     let data = req.body
     let client1 = new Client(data)
     await client1.save()
     res.end()
 })
 
-router.put('/clients/:clientId', async function(req, res){
+router.put('/actions/:clientId', async function(req, res){
     let clientId = req.params.clientId
     Client.findOneAndUpdate({_id : clientId}, req.body, function(request, response){
 

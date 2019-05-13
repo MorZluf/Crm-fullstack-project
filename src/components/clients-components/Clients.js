@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Client from './client'
+import Client from './Client'
 import ColumnHeaders from './ColumnHeaders'
 import SearchInput from './SearchInput'
 import '../../style/client.css'
@@ -22,17 +22,12 @@ class Clients extends Component {
     }
 
     getDataFromDB = async () => {
-        // let data = [...this.state.data]
         let clients = await axios.get('http://localhost:7100/clients')
-        console.log(clients)
-        // data.push(clients)
-        // await this.setState({ data })
         return clients.data
     }
 
     componentDidMount = async () => {
       let data = await this.getDataFromDB()
-      console.log(data)
         this.setState({data})
     }
 
