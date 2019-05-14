@@ -13,18 +13,17 @@ class Update extends Component {
     handleInput = (e) => {this.props.handleInput(e)}
     
     updateOwner = () => {
-        let filteredClient = this.props.data.find(d => d.name == this.props.client)
-        console.log(filteredClient._id)
+        let filteredClient = this.props.data.find(d => d.name === this.props.client)
         return this.props.updateOwner(filteredClient._id)
     }
 
     sendEmail = () => {
-        let filteredClient = this.props.data.find(d => d.name == this.props.client)
+        let filteredClient = this.props.data.find(d => d.name === this.props.client)
         return this.props.sendEmail(filteredClient._id)
     }
 
     updateSold = () => {
-        let filteredClient = this.props.data.find(d => d.name == this.props.client)
+        let filteredClient = this.props.data.find(d => d.name === this.props.client)
         return this.props.updateSold(filteredClient._id)
     }
 

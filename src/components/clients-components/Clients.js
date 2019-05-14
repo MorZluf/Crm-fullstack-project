@@ -4,6 +4,7 @@ import ColumnHeaders from './ColumnHeaders'
 import SearchInput from './SearchInput'
 import '../../style/client.css'
 import axios from 'axios'
+import PopUp from './PopUp';
 
 class Clients extends Component {
     constructor() {
@@ -11,7 +12,11 @@ class Clients extends Component {
         this.state = {
             data: [],
             searchInput: "",
-            selectInput: "name"
+            selectInput: "name",
+            isShow: false,
+            popUpName: "",
+            popUpSurname: "",
+            popUpCountry: ""
         }
     }
 
@@ -31,6 +36,14 @@ class Clients extends Component {
         this.setState({data})
     }
 
+    showPopUpClient = () => {
+        this.setState({isShow: true})
+    }
+    
+    hidePopUpClient = () => {
+        this.setState({isShow: false})
+    }
+
     render() {
         return (
 
@@ -41,9 +54,12 @@ class Clients extends Component {
                     {this.state.data.filter(c => c[this.state.selectInput] ?
                         c[this.state.selectInput].toLowerCase().includes(this.state.searchInput.toLowerCase()) :
                         c[this.state.searchInput])
-                        .map(c => <Client key={c._id} client={c} />)}
+                        .map(c => <Client key={c._id} client={c} showPopUpClient={this.showPopUpClient} />)}
                 </div>
-
+                {this.state.isShow  ? 
+                <PopUp hidePopUpClient={this.hidePopUpClient} popUpName={this.state.popUpName}
+                popUpSurname={this.state.popUpSurname} popUpCountry={this.state.popUpCountry} /> :
+                null}
             </div>
         )
     }

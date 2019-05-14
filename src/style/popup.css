@@ -1,0 +1,58 @@
+
+#popup{
+    width: 25vw;
+    height: 45vh;
+    background-color: black;
+    opacity: 0.8;
+    position: absolute;
+    top: 30vh;
+    left: 30vw;
+    color: #8dd1e4;  
+    border-radius: 20px;
+}
+
+#popup-btn{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #8dd1e4;
+    color: black;
+    border: 2px solid black;
+    border-radius: 25%;
+    font-weight: bold;
+}
+
+#popup-info-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    top: 25%;
+    justify-items: center; 
+    align-items: center;
+}
+
+#update-client-btn{
+    background-color: #F7CE3E;
+    width: 95%;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;  
+    border: 2px solid black;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.popup-input{
+    background-color: black;
+    color: #8dd1e4;
+    border: 2px solid black;
+    border-bottom: 2px solid #8dd1e4;
+    
+}
+
+.popup-text{
+    font-weight: bold;
+    font-size: 19px;
+}

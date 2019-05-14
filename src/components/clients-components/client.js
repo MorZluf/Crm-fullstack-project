@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import '../../style/client.css'
 
 class Client extends Component {
+    
+
+    showPopUpClient = () => this.props.showPopUpClient()
 
     render() {
         let c = this.props.client

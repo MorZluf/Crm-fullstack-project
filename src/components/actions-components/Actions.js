@@ -12,7 +12,12 @@ class Actions extends Component {
             data: [],
             owner: "",
             client: "",
-            emailType: ""
+            emailType: "",
+            firstName: "",
+            surName: "", 
+            country: "", 
+            ownerAtAddClient: ""
+
         }
     }
 
@@ -32,17 +37,22 @@ class Actions extends Component {
 
     updateOwner = async (id) => {
         await axios.put(`http://localhost:7100/actions/${id}`, {owner: this.state.owner})
-            console.log(`moved to ${this.state.owner}`)
+            console.log(`${this.state.client} moved to ${this.state.owner}`)
     }
 
     sendEmail = async (id) => {
         await axios.put(`http://localhost:7100/actions/${id}`, {emailType: this.state.emailType})
-        console.log(`sent email type ${this.state.emailType}`)
+        console.log(`sent email type ${this.state.emailType} to ${this.state.client}`)
     }
 
     updateSold = async (id) => {
         await axios.put(`http://localhost:7100/actions/${id}`, {sold: true})
-        console.log("Sold! to the nice person. good job owner :)")
+        console.log(`Sold! to the nice person ${this.state.client}`)
+    }
+
+    addClient = async (newClient) => {
+        await axios.post('http://localhost:7100/actions', newClient)
+            console.log(`We have a new client! Welcome ${this.state.firstName} ${this.state.surName}`)
     }
 
 
@@ -53,7 +63,9 @@ class Actions extends Component {
                 handleInput={this.handleInput} updateOwner={this.updateOwner} sendEmail={this.sendEmail} 
                 updateSold={this.updateSold} />
                 <hr />
-                <AddClient />
+                <AddClient data={this.state.date} firstName={this.state.firstName} surName={this.state.surName} 
+                country={this.state.country} ownerAtAddClient={this.state.ownerAtAddClient} 
+                handleInput={this.handleInput} addClient={this.addClient}/>
             </div>
         )
     }

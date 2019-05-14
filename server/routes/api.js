@@ -6,7 +6,6 @@ const Client = require('../model/Client')
 // this function will run only one time to populate the DB with the clients data
 const populateDB = async function () {
     const data = require('../.././src/utils/data')
-    console.log(data)
     for (let d of data) {
         let client1 = new Client({
             name: d.name,
@@ -52,11 +51,19 @@ router.put('/actions/:clientId', async function(req, res){
     })
 })
 
-router.delete('/clients/:clientId', function(req, res){
-    let clientId = req.params.clientId 
-    Client.findOneAndDelete({_id: clientId}).exec()  
-    res.send("delete shoobert") 
+router.put('/clients/:clientId', async function(req, res){
+    let clientId = req.params.clientId
+    Client.findOneAndUpdate({_id : clientId}, req.body, function(request, response){
+
+        res.send("client's info was updated")
     })
+})
+
+// router.delete('/clients/:clientId', function(req, res){
+//     let clientId = req.params.clientId 
+//     Client.findOneAndDelete({_id: clientId}).exec()  
+//     res.send("delete shoobert") 
+//     })
     
 
 
