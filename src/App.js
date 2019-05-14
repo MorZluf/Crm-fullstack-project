@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Navbar from './components/Navbar';
 import Clients from './components/clients-components/Clients';
 import Actions from './components/actions-components/Actions';
-import Analytics from './components/Analytics';
+import Analytics from './components/analytics-components/Analytics';
 
 
 class App extends Component {

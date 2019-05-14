@@ -1,0 +1,33 @@
+
+.fa-chart-line{
+    background-color:#2ecc71; 
+    color: #ecf0f1;
+    padding: 10px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#badges-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#new-Clients-badge{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: left;
+}
+
+#new-clients-count{
+    font-size: 50px;
+    align-items: top;
+    display: block;
+    text-align: left;
+    padding: 10px;
+}
+
+#new-clients-text{
+    font-size: 18px;
+    text-align: left;
+}
