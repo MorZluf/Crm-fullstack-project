@@ -11,6 +11,7 @@
 #badges-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 20px;
 }
 
 #new-Clients-badge{

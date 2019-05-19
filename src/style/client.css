@@ -2,6 +2,8 @@
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     position: relative;
+    padding: 5px;
+    border-bottom: 1px solid rgb(88, 72, 72);
 }
 
 #column-headers{

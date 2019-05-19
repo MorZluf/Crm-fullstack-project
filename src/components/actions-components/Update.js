@@ -33,7 +33,7 @@ render() {
         <div id="update-container">
             <h3>Update</h3>
             <ClientInput data={this.props.data} client={this.props.client} handleInput={this.props.handleInput} />
-            <div id="actions-container">
+            <div>
                 <div id="transfer">
                     <span>Transfer ownership to</span>
                     <input list="owners-list" name="owner" value={this.props.owner} 

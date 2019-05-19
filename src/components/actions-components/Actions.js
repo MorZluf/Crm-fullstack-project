@@ -58,7 +58,7 @@ class Actions extends Component {
 
     render() {
         return (
-            <div>
+            <div id="actions-container">
                 <Update data={this.state.data} owner={this.state.owner} client={this.state.client} 
                 handleInput={this.handleInput} updateOwner={this.updateOwner} sendEmail={this.sendEmail} 
                 updateSold={this.updateSold} />

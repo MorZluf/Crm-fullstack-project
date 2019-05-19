@@ -21,7 +21,7 @@ class AddClient extends Component {
 
     render() {
         return (
-            <div>
+            <div id="add-client-container">
                 <h3>Add Client</h3>
                 <div>
                     <span>First Name : </span> <input type="text" name="firstName"
