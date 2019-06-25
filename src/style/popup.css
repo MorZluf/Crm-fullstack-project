@@ -49,6 +49,9 @@
     color: #8dd1e4;
     border: 2px solid black;
     border-bottom: 2px solid #8dd1e4;
+    width: 80%;
+    display: grid;
+    justify-self: left;
     
 }
 

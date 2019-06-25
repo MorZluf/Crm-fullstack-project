@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import Graph from './SalesSinceGraph';
+// import Graph from './SalesSinceGraph';
 import TopEmployeesBar from './TopEmployeesBar';
+import '../../../style/charts.css'
 
 class Charts extends Component{
 

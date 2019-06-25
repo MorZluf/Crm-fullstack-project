@@ -1,0 +1,8 @@
+
+#barchart-container{
+    padding-left: 10px;
+}
+
+#analytics-container{
+    height: calc(100vh - 50px);
+}

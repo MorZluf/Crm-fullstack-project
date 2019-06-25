@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import Badges from './Badges/Badges';
 import Charts from './Charts/Charts';
+import '../../style/charts.css'
 
 
 class Analytics extends Component {
@@ -25,7 +26,7 @@ class Analytics extends Component {
 
     render() {
         return (
-            <div>
+            <div id="analytics-container">
                 <Badges data={this.state.data}/>
                 <Charts data={this.state.data}/>
             </div>
