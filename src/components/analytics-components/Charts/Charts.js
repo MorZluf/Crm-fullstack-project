@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 // import Graph from './SalesSinceGraph';
 import TopEmployeesBar from './TopEmployeesBar';
 import '../../../style/charts.css'
+import SalesBy from './SalesBy';
 
 class Charts extends Component{
 
@@ -10,6 +11,7 @@ class Charts extends Component{
         return(
             <div id="charts-container">
                 <TopEmployeesBar data={this.props.data} />
+                <SalesBy data={this.props.data} />
                 {/* <Graph /> */}
             </div>
         )

@@ -10,7 +10,7 @@ class Badges extends Component {
         let currentMonth = new Date().getMonth() + 1
         let currentYear = new Date().getFullYear()
         let newClients = this.props.data.map(c => c.firstContact)
-            .filter(c => c.split("-")[0] == currentYear && c.split("-")[1] == currentMonth)
+            .filter(c => c.split("-")[0] === currentYear && c.split("-")[1] === currentMonth)
         return newClients.length
     }
 

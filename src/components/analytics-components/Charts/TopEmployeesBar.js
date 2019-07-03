@@ -22,14 +22,14 @@ class TopEmployeesBar extends Component {
         return (
             <div id="barchart-container">
                 <span>Top Employees</span>
-                <BarChart width={400} height={150} data={data} layout="vertical" margin={{
+                <BarChart width={400} height={250} data={data} layout="vertical" margin={{
           top: 5, right: 10, left: 10, bottom: 5,
         }}>
                     <CartesianGrid strokeDasharray="3 3" />
                     <YAxis type="category" dataKey="name"/>
                     <XAxis  type="number"/>
                     <Tooltip />
-                    <Bar dataKey="count" fill="#8884d8" />
+                    <Bar dataKey="count" fill="#006494" />
                 </BarChart>
             </div>
 
