@@ -3,16 +3,16 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts'
 
 
 class SalesBy extends Component {
+    
     getSalesByCountry = () => {
         
         const countryData = {}
         let soldArray = this.props.data.filter(c => c.sold)
         for (let sold of soldArray) {
-            countryData[sold.country] = countryData[sold.country]? countryData[sold.country] + 1 :  1
+            countryData[sold.country] = countryData[sold.country] ? countryData[sold.country] + 1 :  1
            }
            let salesByCountry = Object.entries(countryData)
            .map(country => ({ name: country[0], count: country[1]}))
-           console.log(salesByCountry)
            return salesByCountry
         }
 

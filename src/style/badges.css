@@ -33,7 +33,8 @@
     text-align: left;
 }
 
-.fas{
+.fa-envelope{
+    background-color: #3498db;
     color: #ecf0f1;
     margin-top: 10px;
     margin-left: 10px;
@@ -41,14 +42,20 @@
     padding: 10px;
 }
 
-.fa-envelope{
-    background-color: #3498db;
-}
-
 .fa-user-circle{
-    background-color: #e74c3c;  
+    background-color: #e74c3c; 
+    color: #ecf0f1;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 50%;
+    padding: 10px; 
 }
 
 .fa-globe-americas{
     background-color: #f1c40f;
+    color: #ecf0f1;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 50%;
+    padding: 10px;
 }
