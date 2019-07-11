@@ -23,7 +23,7 @@ class SalesByEmail extends Component {
         
         return (
             <div id="sales-by-email-container">
-                <span>Sales By Email</span>
+                <span className="text">Sales By Email</span>
                 <PieChart width={300} height={240}>
                     <Pie dataKey="count" isAnimationActive={true} 
                     data={data} cx={150} cy={120} 

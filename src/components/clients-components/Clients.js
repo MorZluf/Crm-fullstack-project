@@ -27,7 +27,7 @@ class Clients extends Component {
     }
 
     getDataFromDB = async () => {
-        let clients = await axios.get('http://localhost:7100/clients')
+        let clients = await axios.get('http://localhost:7100/')
         return clients.data
     }
 

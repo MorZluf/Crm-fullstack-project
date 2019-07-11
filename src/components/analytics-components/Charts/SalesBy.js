@@ -21,7 +21,7 @@ class SalesBy extends Component {
 
         return (
             <div id="sales-by-container">
-                <span>Sales By Country</span>
+                <span className="text">Sales By Country</span>
                 <BarChart
                     width={700}
                     height={240}
