@@ -56,10 +56,10 @@ class Clients extends Component {
                         c[this.state.searchInput])
                         .map(c => <Client key={c._id} client={c} showPopUpClient={this.showPopUpClient} />)}
                 </div>
-                {this.state.isShow  ? 
+                {/* {this.state.isShow  ? 
                 <PopUp hidePopUpClient={this.hidePopUpClient} popUpName={this.state.popUpName}
                 popUpSurname={this.state.popUpSurname} popUpCountry={this.state.popUpCountry} /> :
-                null}
+                null} */}
             </div>
         )
     }

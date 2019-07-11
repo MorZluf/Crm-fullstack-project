@@ -20,11 +20,11 @@ class SalesBy extends Component {
         const data = this.getSalesByCountry()
 
         return (
-            <div>
+            <div id="sales-by-container">
                 <span>Sales By Country</span>
                 <BarChart
                     width={700}
-                    height={250}
+                    height={240}
                     data={data}
                     margin={{
                         top: 5, right: 30, left: 20, bottom: 5,

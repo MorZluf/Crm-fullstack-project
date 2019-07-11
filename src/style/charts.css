@@ -4,5 +4,33 @@
 }
 
 #analytics-container{
-    height: calc(100vh - 50px);
+    height: 100%;
+    width: 100%;
+}
+
+#charts-container{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    "a b"
+    "c c";
+    justify-items: center;
+    align-items: center;
+}
+
+#top-employee-container-container{
+    display: grid;
+    grid-area: a;
+    justify-content: center;
+}
+
+#sales-by-email-container{
+    display: grid;
+    grid-area: b;
+}
+
+#sales-by-container{
+    display: grid;
+    grid-area: c;
 }

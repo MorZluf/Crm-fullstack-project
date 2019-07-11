@@ -24,3 +24,7 @@ a{
     color: #ecf0f1;
     text-decoration: none;
 }
+
+#current-tab{
+    background-color: #3843a1;
+}

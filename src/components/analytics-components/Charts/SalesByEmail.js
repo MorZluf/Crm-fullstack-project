@@ -22,9 +22,9 @@ class SalesByEmail extends Component {
         const data = this.getSalesByEmail()
         
         return (
-            <div>
+            <div id="sales-by-email-container">
                 <span>Sales By Email</span>
-                <PieChart width={400} height={400}>
+                <PieChart width={300} height={240}>
                     <Pie dataKey="count" isAnimationActive={true} 
                     data={data} cx={150} cy={120} 
                     outerRadius={100} fill="#006494" label />

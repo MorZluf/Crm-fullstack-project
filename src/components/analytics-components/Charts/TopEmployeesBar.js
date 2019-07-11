@@ -20,9 +20,9 @@ class TopEmployeesBar extends Component {
     render() {
         const data = this.getTopEmployees()
         return (
-            <div id="barchart-container">
+            <div id="top-employee-container">
                 <span>Top Employees</span>
-                <BarChart width={400} height={250} data={data} layout="vertical" margin={{
+                <BarChart width={400} height={240} data={data} layout="vertical" margin={{
           top: 5, right: 10, left: 10, bottom: 5,
         }}>
                     <CartesianGrid strokeDasharray="3 3" />
